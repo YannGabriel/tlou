@@ -25,6 +25,16 @@ body{
     overflow-x: hidden;
 }
 
+.start-video{
+    box-shadow: 0px 0px 20px var(--dts);
+    width: 100%;
+}
+
+.video-config{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
 @media (min-width: 1200px) {
 
     .container-top-page{
@@ -86,16 +96,16 @@ body{
         font-size: 2.5rem;
         padding: 10px;
         padding-right: 35px;
-        text-align: end;
+        text-align: start;
     }
     
     section > p.descrption-minimus-about-game{
+        padding-top: 50px;
         padding-right: 10px;
         width: 350px;
-        margin: auto;
         font-family: "Oswald", sans-serif;
         font-size: 1.6rem;
-        text-align: end;
+        text-align: justify;
     }
     
     p.descrption-minimus-about-game > a.target-credits{
@@ -105,7 +115,8 @@ body{
     
     .about-game-concept{
         width: 400px;
-        padding-left: 380px;
+        padding-left: 300px;
+        padding-right: 150px;
     }
     
     .content-block{
@@ -114,9 +125,10 @@ body{
     }
     
     img.demo{
+        margin-top: 100px;
         margin-left: 10px;
         width: 350px;
-        height: 550;
+        height: 550px;
         border-radius: 10px;
     }
 }
