@@ -1,4 +1,6 @@
 *{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +20,9 @@
     --bckg-clr: #ffffff;
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: var(--bckg-clr);
@@ -35,6 +39,197 @@ body{
     justify-content: center;
     margin: auto;
 }
+
+.hidden{
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 0.6s ease;
+}
+
+.show{
+    transform: translateX(0);
+    filter: blur(0px);
+    transition: all 0.8s ease;
+    opacity: 1;
+}    
+
+@media (max-width: 1199px) {
+    .container-top-page{
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        background: rgb(2,0,36);
+        background: linear-gradient(180deg, rgba(2,0,36,0.8380602240896359) 0%, rgba(0,0,0,0) 50%); 
+        margin: auto;
+        width: 100%;
+        height: 115px;
+    }
+    
+    h1.site-name-logo{
+        padding-top: 20px;
+        padding-left: 40px;
+        align-items: center;
+        font-size: 2.4rem;
+        color: var(--bckg-clr);
+        font-family: title;
+    }
+    
+    ul.search{
+        list-style: none;
+        display: inline-block;
+    }
+    
+    li.search-block{
+        color: var(--bckg-clr);
+        justify-content: space-between;
+        padding: 30px 9px 0px 9px;
+        align-items: center;
+        display: inline-block;
+        font-family: poketext;
+        font-size: 0.9rem;
+    }
+
+    ul.search a{
+        text-decoration: none;
+    }
+    
+    .start-video{
+        box-shadow: 0px 0px 20px var(--dts);
+        width: 100%;
+    }
+    
+    .content-first{
+        margin: auto;
+    }
+    
+    h1.about-game{
+        color: var(--text-color);
+        font-family: title;
+        font-size: 2.9rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    h2.about-game{
+        margin: auto;
+        width: 250px;
+        color: var(--text-color);
+        font-family: title;
+        font-size: 2.5rem;
+        padding-right: 35px;
+        text-align: center;
+    }
+
+    section > p.descrption-minimus-about-game{
+        margin: auto;
+        padding-top: 30px;
+        width: 350px;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.6rem;
+        text-align: justify;
+        padding-bottom: 50px;
+    }
+    
+    p.descrption-minimus-about-game > a.target-credits{
+        text-decoration: none;
+        color: red;
+    }
+    
+    .about-game-concept{
+        margin: auto;
+        width: 350px;
+    }
+    
+    img.demo{
+        margin: auto;
+        display: flex;
+        width: 350px;
+        height: 550px;
+        border-radius: 10px;
+    }
+
+    .more-content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    a.item-search-result{
+        text-decoration: none;
+    }
+
+    .item-search-result:hover{
+        border-radius: 80%;
+        transform: scale(1.015);
+        transition: all .6s;
+    }
+
+    .call-new{
+        width: 100%;
+        height: 100%;
+    }
+
+    .span-content-search{
+        color: white;
+        padding: 400px 0px 200px 0px;        
+        text-align: center;
+        margin: auto;
+    }
+
+    h1.item-plus-img{
+        font-size: 45px;
+    }
+
+    i{
+        margin: auto;
+        display: inline-block;
+    }
+
+    footer.information-about{
+        height: 700px;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        background-color: var(--text-color);
+        color: var(--dts);
+    }
+
+    .about-programer{
+        padding: 20px;
+    }
+
+    span.atr-direct{
+        font-size: 22px;
+    }
+
+    .dev-name{
+        font-size: 48px;
+    }
+
+    .contact a{
+        color: var(--bckg-clr);
+        text-decoration: none;
+    }
+
+    .directs-for{
+        width: 300px;
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .simbols{
+        display: flex;
+        justify-content: center;
+    }
+
+    img#simbols{
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
 @media (min-width: 1200px) {
 
     .container-top-page{
@@ -72,6 +267,10 @@ body{
         font-family: poketext;
         font-size: 0.9rem;
     }
+
+    ul.search a{
+        text-decoration: none;
+    }
     
     .start-video{
         box-shadow: 0px 0px 20px var(--dts);
@@ -89,8 +288,9 @@ body{
         padding: 10px;
         text-align: center;
     }
-    
+
     h2.about-game{
+        width: 250px;
         color: var(--text-color);
         font-family: title;
         font-size: 2.5rem;
@@ -130,6 +330,86 @@ body{
         width: 350px;
         height: 550px;
         border-radius: 10px;
+    }
+
+    .more-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    a.item-search-result{
+        text-decoration: none;
+    }
+
+    .item-search-result:hover{
+        border-radius: 80%;
+        transform: scale(1.015);
+        transition: all .6s;
+    }
+
+    .call-new{
+        width: 100%;
+        height: 100%;
+    }
+
+    .span-content-search{
+        color: white;
+        padding: 400px 0px 200px 0px;        
+        text-align: center;
+        margin: auto;
+    }
+
+    h1.item-plus-img{
+        font-size: 45px;
+    }
+
+    i{
+        margin: auto;
+        display: inline-block;
+    }
+
+    footer.information-about{
+        height: 400px;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        background-color: var(--text-color);
+        color: var(--dts);
+    }
+
+    .about-programer{
+        float: left;
+        padding: 20px;
+    }
+
+    span.atr-direct{
+        font-size: 22px;
+    }
+
+    .dev-name{
+        font-size: 48px;
+    }
+
+    .contact a{
+        color: var(--bckg-clr);
+        text-decoration: none;
+    }
+
+    .directs-for{
+        float: right;
+        width: 300px;
+        text-align: justify;
+        padding: 50px;
+    }
+
+    .simbols{
+        display: flex;
+        justify-content: center;
+    }
+
+    img#simbols{
+        cursor: pointer;
+        width: 100px;
+        height: 100px;
     }
 }
 
