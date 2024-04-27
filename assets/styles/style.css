@@ -123,6 +123,7 @@ body{
     }
     
     .about-game-concept{
+        padding-left: 30%;
         margin: auto;
         width: 350px;
     }
@@ -300,8 +301,7 @@ body{
     
     .about-game-concept{
         width: 400px;
-        padding-left: 300px;
-        padding-right: 150px;
+        padding-left: 30%;
     }
     
     .content-block{
